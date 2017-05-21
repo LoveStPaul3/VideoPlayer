@@ -7,27 +7,27 @@
    （1）加载每个数据，就不贴图了=。=<br>
    （2）每个item显示视频部分具体信息····<br>
    （3）截取视频第一帧显示在item上  （完成）<br>
-  ![](https://github.com/LoveStPaul3/VideoPlayer/blob/master/app/src/main/res/drawable/1.png)<br>
+  ![](https://github.com/LoveStPaul3/VideoPlayer/blob/master/app/src/main/res/drawable/q1.png)<br>
     （4）在列表播放时，`item划出后暂停，滑回来过后点播放可以从上次播放的地方继续播放。`（没做动态图）<br>
 播放控制<br>
 ----
 1.进度条，拖动改变视频进度<br>
-  ![](https://github.com/LoveStPaul3/VideoPlayer/blob/master/app/src/main/res/drawable/2.png)<br>
+  ![](https://github.com/LoveStPaul3/VideoPlayer/blob/master/app/src/main/res/drawable/q2.png)<br>
 2.开始，暂停，下一个&上一个      在此基础上增加了`点击播放视频的案件之外的区域会隐藏这些按钮，再次点击就会显示这些按钮`<br>
 3.重力感应  切换横竖屏后，视频不会从头开始播放。<br>
-  ![](https://github.com/LoveStPaul3/VideoPlayer/blob/master/app/src/main/res/drawable/8.png)<br>
+  ![](https://github.com/LoveStPaul3/VideoPlayer/blob/master/app/src/main/res/drawable/q8.png)<br>
 扩展功能<br>
 -----
 1.播放进度保存，再次播放跳转到上次播放的地方<br>
 2.播放记录，按时间排序<br>
-  ![](https://github.com/LoveStPaul3/VideoPlayer/blob/master/app/src/main/res/drawable/6.png)<br>
+  ![](https://github.com/LoveStPaul3/VideoPlayer/blob/master/app/src/main/res/drawable/q6.png)<br>
  `只有在item点击了大按钮播放后，才算是播放，在视频中点击上下一集并没有记录在内`<br>
  3.视频下载到本机，且有进度条<br>
-   ![](https://github.com/LoveStPaul3/VideoPlayer/blob/master/app/src/main/res/drawable/5.png)<br>
+   ![](https://github.com/LoveStPaul3/VideoPlayer/blob/master/app/src/main/res/drawable/q5.png)<br>
 4.下到本地后再次播放使用本地数据。<br>
 5.滑动删除播放记录`没做=。=` <br>
 6.视频缓冲  进度条分为两种<br>
-   ![](https://github.com/LoveStPaul3/VideoPlayer/blob/master/app/src/main/res/drawable/3.png)<br>
+   ![](https://github.com/LoveStPaul3/VideoPlayer/blob/master/app/src/main/res/drawable/q3.png)<br>
 其他<br>
 ------
 1.做了一定的封装，UI逻辑还好吧（自我感觉=。=）<br>
