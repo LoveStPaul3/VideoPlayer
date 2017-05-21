@@ -3,6 +3,8 @@ package com.example.administrator.videoplayer.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
@@ -41,8 +43,10 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static com.example.administrator.videoplayer.R.id.decor_content_parent;
 import static com.example.administrator.videoplayer.R.id.never;
 import static com.example.administrator.videoplayer.R.id.surfaceView;
+import static com.example.administrator.videoplayer.R.id.surface_image;
 
 /**
  * Created by 我 on 2017/5/19.
@@ -56,6 +60,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     private MediaPlayer mediaPlayer;
     private Handler mHandler;
+    private static final  int TAG_KEY_URL = R.id.surfaceView;
+    private Handler hander;
     private static ArrayList<String> info = new ArrayList<String>();
     private static int outPausePosition =0;
     private List<VideoBeans> list = new ArrayList<>();
@@ -64,8 +70,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     private static int play_position;
     private boolean flag = true;//在播放还是没播放
     private upDateSeekBar playingSeekBar; // 更新进度条用
-    private static int savedPosition;//===============记录当前播放文件播放的进度
-    private static String savedFilepath;//===============记录当前播放文件的位置
     private static String path;
     private CallBack callBack = null;
 
@@ -107,12 +111,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
             holder.date.setText(videoBeans.getData());
             holder.dianzanshu.setText(videoBeans.getLove());
             holder.caishu.setText(videoBeans.getHate());
+
             MediaMetadataRetriever retriever = new MediaMetadataRetriever();
             retriever.setDataSource(list.get(position).getVideoUrl(), new HashMap<String, String>());
             bitmap = retriever.getFrameAtTime(1000);
+            Drawable drawable = new BitmapDrawable(bitmap);
 
-            holder.surfance_image.setImageBitmap(bitmap);
 
+           holder.surfance_image.setImageDrawable(drawable);
             playingSeekBar  = new upDateSeekBar();
 
             holder.play.setOnClickListener(new View.OnClickListener() {
@@ -231,11 +237,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     private void setVisible(LinearLayout linearLayout,ImageButton full) {
         linearLayout.setVisibility(View.VISIBLE);
         full.setVisibility(View.VISIBLE);
-
-
-
-
-
     }
      private void replay(int position,SurfaceHolder holder){
          try {

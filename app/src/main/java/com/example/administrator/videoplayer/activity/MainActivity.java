@@ -96,9 +96,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
     private void setRecyclerView() {
         mLinearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLinearLayoutManager);
