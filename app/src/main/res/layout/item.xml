@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+              android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="60dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:id="@+id/publisher_icon"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="发布者"
+         android:id="@+id/publish_name"
+         android:textSize="20sp"
+         />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/publish_time"
+            android:text="2017年5月20日"
+            />
+    </LinearLayout>
+</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:textSize="15sp"
+        android:text="这里就是视频的标题！！！"
+        android:id="@+id/publish_title"/>
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/publish_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/surface_image"
+        android:layout_below="@+id/publish_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <ImageButton
+        android:id="@+id/button_play"
+        android:layout_marginTop="60dp"
+        android:background="#00000000"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/play"
+        android:text="点击播放"
+        android:layout_below="@+id/publish_title"
+        android:layout_centerHorizontal="true"/>
+
+
+    <SeekBar
+        android:id="@+id/video_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/video_ll_bottom"
+        android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:id="@+id/video_ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/surfaceView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:id="@+id/video_tv_otime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="0:0"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+
+
+        <TextView
+            android:id="@+id/video_tv_ctime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:text="0:0"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+
+
+        <Button
+            android:id="@+id/video_btn_play"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/zanting" />
+
+
+
+        <ImageButton
+            android:id="@+id/video_btn_full"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/full"
+            />
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_marginTop="300dp"
+   >
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/dianzan"
+        android:background="#00000000"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/dianzanshu"
+        android:gravity="center"
+        />
+    <ImageButton
+        android:layout_marginLeft="50dp"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+        android:background="#00000000"
+        android:src="@drawable/cai"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/caishu"
+        android:gravity="center"
+        />
+    <ImageButton
+        android:layout_marginLeft="50dp"
+        android:background="#00000000"
+        android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:src="@drawable/share"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+         android:text="520"
+        android:gravity="center"
+        />
+    <ImageButton
+        android:layout_marginLeft="60dp"
+        android:background="#00000000"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/pinglun"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="520"
+        android:gravity="center"
+        />
+</LinearLayout>
+</RelativeLayout>

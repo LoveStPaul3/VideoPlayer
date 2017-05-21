@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<SurfaceView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/full_video"
+    />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/video_seekbar_full"
+        android:layout_above="@+id/video_buttom_full"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:id="@+id/video_buttom_full"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/video_tv_otime_full"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="0:0"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+
+
+        <TextView
+            android:id="@+id/video_tv_ctime_full"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:text="0:0"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/shangyige_full"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shangyige"
+            />
+
+        <Button
+            android:id="@+id/video_btn_play_full"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/zanting" />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/xiayige"
+            android:scaleType="centerCrop"
+            android:background="#00000000"
+
+            android:id="@+id/xiayige_full"
+            android:layout_marginLeft="10dp"
+            />
+<ImageButton
+    android:layout_width="50dp"
+    android:layout_height="match_parent"
+    android:id="@+id/full_xiazai"
+    android:src="@drawable/xiazai"
+    android:layout_marginLeft="10dp"
+    android:background="#00000000"
+    />
+        <ImageButton
+            android:id="@+id/video_btn_outfull"
+            android:layout_width="50dp"
+
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/play"
+            android:background="#00000000"
+
+            />
+
+    </LinearLayout>
+</RelativeLayout>
